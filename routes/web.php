@@ -55,7 +55,7 @@ Route::post('/transacoes/criar', 'TransacaoController@store');
 #Rotas da origem da transação
 Route::get('/origens', 'OrigemTransacaoController@list')->name('listar_origens');
 
-Route::get('/origens/criar', 'OrigemTransacaoController@create')->name('criar_origem');
+Route::get('/origens/criar', 'OrigemTransacaoController@create')->name('cadastro origens');
 
 Route::post('/origens/criar', 'OrigemTransacaoController@store');
 
