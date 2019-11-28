@@ -12,7 +12,7 @@ class FornecedorController extends Controller
 {
     public function list(Request $request)
     {
-        $fornecedores = Fornecedor::query()->orderBy('nome')->get();
+        $fornecedores = Fornecedor::query()->orderBy('id')->get();
         $mensagem = $request->session()->get('mensagem');
         return view('fornecedor.listarFornecedor', compact('fornecedores', 'mensagem'));
     }

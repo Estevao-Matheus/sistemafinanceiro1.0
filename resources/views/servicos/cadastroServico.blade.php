@@ -4,7 +4,7 @@
     Serviços
 @endsection
 @section('subtitulo')
-
+    Cadastro de Serviços
 @endsection
 @section('content')
     <body>
@@ -24,7 +24,7 @@
 
                     <div class="form-group">
                         <label for="telefone"> Descrição: </label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Digite o telefone" name="descricao" >
+                        <input type="text" class="form-control" id="descricao" placeholder="Digite a descricao" name="descricao" >
 
                     </div>
 

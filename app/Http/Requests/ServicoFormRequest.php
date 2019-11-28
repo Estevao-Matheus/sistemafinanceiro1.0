@@ -35,11 +35,11 @@ class ServicoFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'nome.required' => 'O campo Nome é obrigatório',
-            'nome.min' => 'O campo Nome precisa ter pelo menos 4 caracteres',
-            'descricao.required' => 'O campo Endereço é obrigatório',
-            'preco.required' => 'O campo Telefone é obrigatório',
-            'preco.min' => 'O campo Telefone precisa ter pelo menos 4 caracteres'
+            'nome.required' => 'O campo Nome do Serviço é obrigatório',
+            'nome.min' => 'O campo Nome do Serviço precisa ter pelo menos 2 caracteres',
+            'preco.required' => 'O campo Preço é obrigatório',
+            'descricao.required' => 'O campo Descrição é obrigatório',
+            'descricao.min' => 'O campo Descrição precisa ter pelo menos 4 caracteres'
         ];
     }
 
