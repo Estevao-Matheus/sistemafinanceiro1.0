@@ -1,10 +1,10 @@
 @extends('dashboard')
 
 @section('titulo')
-    Serviços
+    Cliente
 @endsection
 @section('subtitulo')
-    Cadastro de Serviços
+    Cadastro de Fornecedores
 @endsection
 @section('content')
     <body>
@@ -13,7 +13,7 @@
             <div class="col-md-4 "></div>
             <div class="col-md-3 " style="background-color:#efeff5;">
                 <br/>
-                <h2>Cadastro de Serviços</h2>
+                <h2>Cadastro de Fornecedores</h2>
 
                 <form class="" method="post">
                     @csrf
@@ -23,20 +23,28 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="telefone"> Descrição: </label>
-                        <input type="text" class="form-control" id="descricao" placeholder="Digite a descricao" name="descricao" >
+                        <label for="cnpj"> CNPJ: </label>
+                        <input type="text" class="form-control" id="cnpj" placeholder="Digite o CNPJ" name="cnpj" >
 
                     </div>
 
+                    
                     <div class="form-group">
-                        <label for="endereco"> Preço: </label>
-                        <input type="text" class="form-control" id="preco" placeholder="Digite o endereco" name="preco" >
+                        <label for="telefone"> Telefone: </label>
+                        <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone" name="telefone" >
+
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="endereco"> Endereço: </label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Digite o endereco" name="endereco" >
 
                     </div>
 
                     <br>
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </form>
                 <br/>
             </div>
@@ -44,6 +52,5 @@
     </div>
 
     </body>
-
 
 @endsection

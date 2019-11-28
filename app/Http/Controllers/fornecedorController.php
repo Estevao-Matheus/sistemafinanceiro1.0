@@ -12,15 +12,15 @@ class FornecedorController extends Controller
 {
     public function list(Request $request)
     {
-        $fornecedores = Fornecedor::query()->orderBy('nomeOrigem')->get();
+        $fornecedores = Fornecedor::query()->orderBy('id')->get();
         $mensagem = $request->session()->get('mensagem');
-        return view('fornecedor.list', compact('fornecedores', 'mensagem'));
+        return view('fornecedor.listarFornecedor', compact('fornecedores', 'mensagem'));
     }
 
 
     public function create()
     {
-        return view('fornecedor.create');
+        return view('fornecedor.cadastroFornecedor');
     }
 
     public function store(FornecedorFormRequest $request)

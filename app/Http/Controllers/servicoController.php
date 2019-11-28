@@ -10,7 +10,8 @@ class servicoController extends Controller
 {
     //
     public function listar(Request $request) {
-        $servico = Servico::query()
+
+        $servicos = Servico::query()
             ->orderBy('id')
             ->get();
         $mensagem = $request->session()->get('mensagem');
@@ -29,9 +30,13 @@ class servicoController extends Controller
         $request->session()
             ->flash(
                 'mensagem',
-                "Série {$servico->id} criada com sucesso {$servico->nome}"
+                "Serviço {$servico->id} criado com sucesso {$servico->nome}"
             );
 
+
         return redirect()->route('listar_servicos');
+
+
+
     }
 }
