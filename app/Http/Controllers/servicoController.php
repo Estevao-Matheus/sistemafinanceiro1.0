@@ -30,9 +30,9 @@ class servicoController extends Controller
         $request->session()
             ->flash(
                 'mensagem',
-                "Série {$servico->id} criada com sucesso {$servico->nome}"
+                "Serviço {$servico->id} criado com sucesso {$servico->nome}"
             );
 
-        return redirect()->route('listar_series');
+        return redirect()->route('listar servicos');
     }
 }
