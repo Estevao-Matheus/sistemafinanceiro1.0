@@ -188,8 +188,8 @@
             </span>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Cadastrar</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Visualizar</a></li>
+                  <li><a href="{{route('criar_fornecedor')}}"><i class="fa fa-circle-o"></i> Cadastrar</a></li>
+                  <li><a href="{{route('listar_fornecedores')}}"><i class="fa fa-circle-o"></i> Visualizar</a></li>
               </ul>
           </li>
           <li class="treeview">

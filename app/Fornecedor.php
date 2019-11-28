@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fornecedor extends Model
 {
-    public $timestamps = false;
-    protected $fillable =['nome'];
 
-    public function transacao()
+    protected $fillable =['nome','cnpj','telefone','endereco'];
+    public $timestamps = false;
+
+    /*public function transacao()
     {
         return $this->$this->hasMany(Transacao::class);
-    }
+    }*/
 }

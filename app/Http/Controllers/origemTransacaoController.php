@@ -6,7 +6,7 @@ use App\Http\Requests\OrigemTransacaoFormRequest;
 use App\OrigemTransacao;
 use Illuminate\Http\Request;
 
-class origemTransacaoController extends Controller
+class OrigemTransacaoController extends Controller
 {
     //
     public function listar(Request $request) {
@@ -20,7 +20,7 @@ class origemTransacaoController extends Controller
 
     public function index()
     {
-        return view('origemtransacao/cadastroOrigem');
+        return view('origemtransacao.cadastroOrigem');
     }
 
     public function store(OrigemTransacaoFormRequest $request)
