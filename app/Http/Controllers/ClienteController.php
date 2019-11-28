@@ -16,7 +16,7 @@ class ClienteController extends Controller
     }
     public function listar(Request $request) {
         $clientes = Cliente::query()
-            ->orderBy('nome')
+            ->orderBy('id')
             ->get();
         $mensagem = $request->session()->get('mensagem');
 

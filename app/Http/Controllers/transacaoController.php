@@ -13,7 +13,7 @@ class transacaoController extends Controller
 {
     public function list(Request $request)
     {
-        $transacoes = Transacao::query()->orderBy('nome')->get();
+        $transacoes = Transacao::query()->orderBy('id')->get();
         $mensagem = $request->session()->get('mensagem');
         return view('transacao.list', compact('transacoes', 'mensagem'));
     }

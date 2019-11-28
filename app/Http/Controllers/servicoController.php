@@ -16,7 +16,7 @@ class servicoController extends Controller
     }
     public function listar(Request $request) {
         $servicos = Servico::query()
-            ->orderBy('nome')
+            ->orderBy('id')
             ->get();
         $mensagem = $request->session()->get('mensagem');
 

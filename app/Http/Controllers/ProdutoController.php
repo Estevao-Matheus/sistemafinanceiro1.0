@@ -12,7 +12,7 @@ class ProdutoController extends Controller
 {
     public function list(Request $request)
     {
-        $produtos = Produto::query()->orderBy('nome')->get();
+        $produtos = Produto::query()->orderBy('id')->get();
         $mensagem = $request->session()->get('mensagem');
         return view('produto.list', compact('produtos', 'mensagem'));
     }
