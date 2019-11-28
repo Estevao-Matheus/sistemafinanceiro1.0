@@ -28,17 +28,20 @@ Route::get('/servicosLista', 'servicoController@listar')->name('listar servicos'
 
 Route::post('/servicos', 'servicoController@store');
 
-Route::get('/origens','OrigemTransacaoController@index')->name('cadastro origens');;
 
-Route::get('/orgigensLista', 'OrigemTransacaoController@listar')->name('listar origens');
+#Rotas da origem da transação
 
-Route::post('/origens', 'OrigemTransacaoController@store');
+Route::get('/origens','origemTransacaoController@index')->name('cadastro origens');;
+
+Route::get('/orgigensLista', 'origemTransacaoController@listar')->name('listar origens');
+
+Route::post('/origens', 'origemTransacaoController@store');
 
 
 #Rotas do produto
 Route::get('/produtos', 'ProdutoController@list')->name('listar_produtos');
 
-Route::get('/produtos/criar', 'ProdutoController@create')->name('criar_produto');
+Route::get('/produtos/criar', 'ProdutoController@index')->name('cadastro_produtos');
 
 Route::post('/produtos/criar', 'ProdutoController@store');
 
@@ -52,12 +55,8 @@ Route::get('/transacoes/criar', 'TransacaoController@create')->name('criar_trans
 Route::post('/transacoes/criar', 'TransacaoController@store');
 
 
-#Rotas da origem da transação
-Route::get('/origens', 'OrigemTransacaoController@list')->name('listar_origens');
 
-Route::get('/origens/criar', 'OrigemTransacaoController@create')->name('cadastro origens');
 
-Route::post('/origens/criar', 'OrigemTransacaoController@store');
 
 
 #Rotas do fornecedor

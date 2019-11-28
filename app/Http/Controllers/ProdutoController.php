@@ -14,26 +14,31 @@ class ProdutoController extends Controller
     {
         $produtos = Produto::query()->orderBy('nome')->get();
         $mensagem = $request->session()->get('mensagem');
-        return view('produto.list', compact('produtos', 'mensagem'));
+        return view('produtos.listarProduto', compact('produtos', 'mensagem'));
     }
 
 
-    public function create()
+    public function index()
     {
-        return view('produto.create');
+        return view('produtos.cadastroProduto');
     }
 
     public function store(ProdutoFormRequest $request)
     {
         $produto = Produto::create($request->all());
-        $request->session()->flash('mensagem', "Produto {$produto->nome} cadastrada com sucesso");
+        $request->session()
+            ->flash(
+                'mensagem',
+                "Série {$produto->id} criada com sucesso {$produto->nome}"
+            );
+
         return redirect()->route('listar_produtos');
     }
 
-    public function destroy (Request $request)
+   /* public function destroy (Request $request)
     {
         Produto::destroy($request->id);
         $request->session()->flash('mensagem', "Produto removida com sucesso");
-        return redirect()->route('listar_produtos');
-    }
+        return redirect()->route('listar produtos');
+    }*/
 }
