@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clientes','ClienteController@index');
+Route::get('/clientes','ClienteController@index')->name('cadastro clientes');;
 
 Route::get('/clientesLista', 'ClienteController@listar')->name('listar clientes');
 
