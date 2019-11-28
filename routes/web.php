@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/clientes','ClienteController@index')->name('cadastro clientes');;
@@ -28,6 +28,11 @@ Route::get('/servicosLista', 'servicoController@listar')->name('listar servicos'
 
 Route::post('/servicos', 'servicoController@store');
 
+Route::get('/origens','OrigemTransacaoController@index')->name('cadastro origens');;
+
+Route::get('/orgigensLista', 'OrigemTransacaoController@listar')->name('listar origens');
+
+Route::post('/origens', 'OrigemTransacaoController@store');
 
 
 #Rotas do produto
