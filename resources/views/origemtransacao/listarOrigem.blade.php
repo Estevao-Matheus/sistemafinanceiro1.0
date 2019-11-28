@@ -1,10 +1,10 @@
 @extends('dashboard')
 
 @section('titulo')
-    Cliente
+    Serviços
 @endsection
 @section('subtitulo')
-    Listagem de Clientes
+    Listagem de Serviços
 @endsection
 
 @section('content')
@@ -19,18 +19,17 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Endereço</th>
+                <th scope="col">Descrição</th>
 
             </tr>
             </thead>
             <tbody>
-            @foreach ($clientes as $cliente)
+            @foreach ($origens as $origem)
                 <tr>
-                    <th scope="row">{{ $cliente->id }}</th>
-                    <td>  {{ $cliente->nome }} </td>
-                    <td>{{ $cliente->telefone }} </td>
-                    <td>{{ $cliente->endereco }} </td>
+                    <th scope="row">{{ $origem->id }}</th>
+                    <td>  {{ $origem->nome }} </td>
+                    <td>{{ $origem->descricao }} </td>
+
 
                 </tr>
             @endforeach
