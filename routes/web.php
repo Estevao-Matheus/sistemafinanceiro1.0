@@ -30,4 +30,36 @@ Route::post('/servicos', 'servicoController@store');
 
 
 
+#Rotas do produto
+Route::get('/produtos', 'ProdutoController@list')->name('listar_produtos');
+
+Route::get('/produtos/criar', 'ProdutoController@create')->name('criar_produto');
+
+Route::post('/produtos/criar', 'ProdutoController@store');
+
+
+
+#Rotas da transação
+Route::get('/transacoes', 'TransacaoController@list')->name('listar_transacoes');
+
+Route::get('/transacoes/criar', 'TransacaoController@create')->name('criar_transacao');
+
+Route::post('/transacoes/criar', 'TransacaoController@store');
+
+
+#Rotas da origem da transação
+Route::get('/origens', 'OrigemTransacaoController@list')->name('listar_origens');
+
+Route::get('/origens/criar', 'OrigemTransacaoController@create')->name('criar_origem');
+
+Route::post('/origens/criar', 'OrigemTransacaoController@store');
+
+
+#Rotas do fornecedor
+Route::get('/fornecedor', 'FornecedorController@list')->name('listar_fornecedores');
+
+Route::get('/fornecedor/criar', 'FornecedorController@create')->name('criar_fornecedor');
+
+Route::post('/fornecedor/criar', 'FornecedorController@store');
+
 
