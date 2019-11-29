@@ -13,6 +13,10 @@
             {{ $mensagem }}
         </div>
     @endif
+    <?php
+        $date = date('m');
+        echo $date;
+    ?>
     <div class="table-responsive">
         <table class="table table-hover table-dark">
             <thead>
@@ -33,7 +37,13 @@
                     <th scope="row">{{ $transacao->id }}</th>
                     <td>  {{ $transacao->nome }} </td>
                     <td>{{ $transacao->descricao }} </td>
-                    <td>{{ $transacao->tipo }} </td>
+                    <td>
+                        @if( ($transacao->tipo) == 0 )
+                            Receita
+                        @else
+                            Dispesa
+                        @endif 
+                    </td>
                     <td>{{ $transacao->valorPrevisto }} </td>
                     <td>{{ $transacao->valorRecebido }} </td>
                     <td>{{ $transacao->data }} </td>

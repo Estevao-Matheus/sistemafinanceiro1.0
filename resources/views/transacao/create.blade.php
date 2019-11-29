@@ -27,11 +27,12 @@
                         <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição" name="descricao" >
 
                     </div>
-
                     <div class="form-group">
                         <label for="tipo"> Tipo:</label>
-                        <input type="text" class="form-control" id="tipo" placeholder="Digite o tipo" name="tipo" >
-
+                        <input type="radio" class="custom-control-input" id="tipo" name="tipo" value="0" >
+                        <label class="custom-control-label" for="tipo">Receita</label>
+                        <input type="radio" class="custom-control-input" id="tipo2" name="tipo" value="1" >
+                        <label class="custom-control-label" for="tipo2">Despesa</label>
                     </div>
 
                     <div class="form-group">
@@ -45,7 +46,7 @@
                         <input type="text" class="form-control" id="valorRecebido" placeholder="Digite o valor recebido" name="valorRecebido" >
 
                     </div>
-
+            
                     <div class="form-group">
                         <label for="data"> Data:</label>
                         <input type="text" class="form-control" id="data" placeholder="Digite a data" name="data" >
