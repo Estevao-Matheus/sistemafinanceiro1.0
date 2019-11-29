@@ -29,6 +29,8 @@ Route::get('/servicosLista', 'servicoController@listar')->name('listar servicos'
 Route::post('/servicos', 'servicoController@store');
 
 
+#Rotas da origem da transação
+
 Route::get('/origens','OrigemTransacaoController@index')->name('cadastro origens');;
 
 Route::get('/orgigensLista', 'OrigemTransacaoController@listar')->name('listar origens');
@@ -39,7 +41,7 @@ Route::post('/origens', 'OrigemTransacaoController@store');
 #Rotas do produto
 Route::get('/produtos', 'ProdutoController@list')->name('listar_produtos');
 
-Route::get('/produtos/criar', 'ProdutoController@create')->name('criar_produto');
+Route::get('/produtos/criar', 'ProdutoController@index')->name('cadastro_produtos');
 
 Route::post('/produtos/criar', 'ProdutoController@store');
 
@@ -51,6 +53,7 @@ Route::get('/transacoes', 'TransacaoController@list')->name('listar_transacoes')
 Route::get('/transacoes/criar', 'TransacaoController@create')->name('criar_transacao');
 
 Route::post('/transacoes/criar', 'TransacaoController@store');
+
 
 
 #Rotas do fornecedor

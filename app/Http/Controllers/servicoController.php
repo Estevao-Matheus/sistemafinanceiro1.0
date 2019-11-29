@@ -9,21 +9,21 @@ use Illuminate\Http\Request;
 class servicoController extends Controller
 {
     //
-    public function index(Request $request)
-    {
-
-        return view('servicos/cadastroServico');
-    }
     public function listar(Request $request) {
+
         $servicos = Servico::query()
             ->orderBy('id')
             ->get();
         $mensagem = $request->session()->get('mensagem');
 
-        return view('servicos/listarServico', compact('servicos', 'mensagem'));
-
-
+        return view('servicos/listarServico', compact('series', 'mensagem'));
     }
+
+    public function index()
+    {
+        return view('servicos/cadastroServico');
+    }
+
     public function store(ServicoFormRequest $request)
     {
         $servico = Servico::create($request->all());
@@ -33,6 +33,10 @@ class servicoController extends Controller
                 "Serviço {$servico->id} criado com sucesso {$servico->nome}"
             );
 
-        return redirect()->route('listar servicos');
+
+        return redirect()->route('listar_servicos');
+
+
+
     }
 }

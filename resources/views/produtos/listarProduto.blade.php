@@ -1,10 +1,10 @@
 @extends('dashboard')
 
 @section('titulo')
-    Origem Transação
+   Produtos
 @endsection
 @section('subtitulo')
-    Listar Origem Transação
+    Listar Produtos
 @endsection
 
 @section('content')
@@ -20,15 +20,17 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
 
             </tr>
             </thead>
             <tbody>
-            @foreach ($origens as $origem)
+            @foreach ($produtos as $produto)
                 <tr>
-                    <th scope="row">{{ $origem->id }}</th>
-                    <td>  {{ $origem->nome }} </td>
-                    <td>{{ $origem->descricao }} </td>
+                    <th scope="row">{{ $produto->id }}</th>
+                    <td>  {{ $produto->nome }} </td>
+                    <td>{{ $produto->descricao }} </td>
+                    <td>{{ $produto->preco }} </td>
 
 
                 </tr>
