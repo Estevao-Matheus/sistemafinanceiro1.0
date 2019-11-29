@@ -18,7 +18,7 @@ class ProdutoController extends Controller
     }
 
 
-    public function index()
+    public function teste(Request $request)
     {
         return view('produtos.cadastroProduto');
     }
