@@ -59,7 +59,6 @@ Route::get('/transacoes/criar', 'TransacaoController@create')->name('criar_trans
 Route::post('/transacoes/criar', 'TransacaoController@store');
 
 
-
 #Rotas do fornecedor
 Route::get('/fornecedor', 'FornecedorController@list')->name('listar_fornecedores');
 
