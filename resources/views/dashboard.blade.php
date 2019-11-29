@@ -57,13 +57,13 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      
+
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
 
 
-            <li><a href="{{route('cadastro clientes')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="{{route('relatorio')}}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
 
 
 

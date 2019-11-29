@@ -54,6 +54,8 @@ Route::post('/produtos/criar', 'ProdutoController@store');
 #Rotas da transação
 Route::get('/transacoes', 'TransacaoController@list')->name('listar_transacoes');
 
+Route::get('/transacoes/relatorio', 'TransacaoController@relatorio')->name('relatorio');
+
 Route::get('/transacoes/criar', 'TransacaoController@create')->name('criar_transacao');
 
 Route::post('/transacoes/criar', 'TransacaoController@store');

@@ -14,10 +14,8 @@ class transacaoController extends Controller
     public function list(Request $request)
     {
         $transacoes = Transacao::query()->orderBy('id')->get();
-        $receitas = 0;
-        $despesas = 0;
         $mensagem = $request->session()->get('mensagem');
-        return view('transacao.list', compact('transacoes', 'receitas', 'despesas', 'mensagem'));
+        return view('transacao.list', compact('transacoes','mensagem'));
     }
 
     public function relatorio(Request $request)

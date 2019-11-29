@@ -13,10 +13,6 @@
             {{ $mensagem }}
         </div>
     @endif
-    <?php
-        $date = date('m');
-        echo $date;
-    ?>
     <div class="table-responsive">
         <table class="table table-hover table-dark">
             <thead>
@@ -29,7 +25,6 @@
                 <th scope="col">Valor Previsto</th>
                 <th scope="col">Valor Recebido</th>
                 <th scope="col">Data</th>
-                <th scope="col">Total</th>
 
 
             </tr>
@@ -45,12 +40,10 @@
 
                             if($transacao->tipo == 0)
                             {
-                                $receitas = ($receitas + $transacao->valorRecebido);
-                                echo 'Receita ='.$receitas;
+                                echo 'Receita';
                             }
                             else {
-                                $despesas = ($despesas + $transacao->valorRecebido);
-                                echo 'Despesa ='.$despesas;
+                                echo 'Despesa';
                             }
                         ?>
                     </td>
@@ -69,28 +62,9 @@
                     <td>{{ $transacao->valorPrevisto }} </td>
                     <td>{{ $transacao->valorRecebido }} </td>
                     <td>{{ $transacao->data }} </td>
-                    <td>
-                        <?php 
-                            $total = ($receitas-$despesas);
-                            echo $total;
-                        ?>
-                    </td>
-
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
 @stop
-<!--
-    $mesAtual = date('m');
-    $data = explode("/", $transacao->data);
-    if($data[1] == $mesAtual)
-    {
-        echo 'Eh o atual';
-    }
-    else {
-        echo 'Nao eh o atual';
-    }
-    
--->
