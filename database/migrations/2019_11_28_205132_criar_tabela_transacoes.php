@@ -21,6 +21,7 @@ class CriarTabelaTransacoes extends Migration
             $table->string('valorPrevisto');
             $table->string('valorRecebido');
             $table->string('data');
+            $table->string('recorrente')->nullable();
         });
     }
 

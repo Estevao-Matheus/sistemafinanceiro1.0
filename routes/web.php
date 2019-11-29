@@ -45,7 +45,7 @@ Route::post('/origens', 'OrigemTransacaoController@store');
 #Rotas do produto
 Route::get('/produtos', 'ProdutoController@list')->name('listar_produtos');
 
-Route::get('/produtos/criar', 'ProdutoController@teste')->name('cadastro_produtos');
+Route::get('/produtos/criar', 'ProdutoController@index')->name('cadastro_produtos');
 
 Route::post('/produtos/criar', 'ProdutoController@store');
 

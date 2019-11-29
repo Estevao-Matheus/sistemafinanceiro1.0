@@ -18,9 +18,9 @@ class ProdutoController extends Controller
     }
 
 
-    public function teste(Request $request)
+    public function index(Request $request)
     {
-        return view('produtos.cadastroProduto');
+        return view('cadastroProduto');
     }
 
     public function store(ProdutoFormRequest $request)

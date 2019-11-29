@@ -14,11 +14,20 @@ class transacaoController extends Controller
     public function list(Request $request)
     {
         $transacoes = Transacao::query()->orderBy('id')->get();
+        $receitas = 0;
+        $despesas = 0;
         $mensagem = $request->session()->get('mensagem');
-        return view('transacao.list', compact('transacoes', 'mensagem'));
+        return view('transacao.list', compact('transacoes', 'receitas', 'despesas', 'mensagem'));
     }
 
-
+    public function relatorio(Request $request)
+    {
+        $transacoes = Transacao::query()->orderBy('id')->get();
+        $receitas = 0;
+        $despesas = 0;
+        $mensagem = $request->session()->get('mensagem');
+        return view('teste', compact('transacoes', 'receitas', 'despesas', 'mensagem'));
+    }
     public function create()
     {
         return view('transacao.create');

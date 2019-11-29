@@ -52,6 +52,10 @@
                         <input type="text" class="form-control" id="data" placeholder="Digite a data" name="data" >
 
                     </div>
+                    <div class="form-group">
+                            <input type="checkbox" class="custom-control-input" id="recorrente" name="recorrente" value="1" >
+                            <label class="custom-control-label" for="recorrente">Recorrente</label>
+                    </div>
                     <br>
 
                     <button type="submit" class="btn btn-primary">Cadastrar</button>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transacao extends Model
 {
     public $timestamps = false;
-    protected $fillable =['nome','descricao','tipo','valorPrevisto','valorRecebido','data'];
+    protected $fillable =['nome','descricao','tipo','valorPrevisto','valorRecebido','data', 'recorrente'];
 
     public function cliente()
     {
